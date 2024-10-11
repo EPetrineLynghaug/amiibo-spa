@@ -10,7 +10,7 @@ export async function fetchAndRenderAmiibos() {
     const amiibos = await fetchAmiibos("https://www.amiiboapi.com/api/amiibo/");
     renderAmiiboList(amiibos);
   } catch (error) {
-    console.error("Error fetching Amiibos:");
+    console.error("Error fetching Amiibos:" + error.message);
   }
 }
 
